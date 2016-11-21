@@ -92,19 +92,18 @@ public class Teste extends PApplet {
 	image(img, x, y);
 
 	// Resizing and showing the image
-	iamge(img, x, y, width, heigth);
+	image(img, x, y, width, heigth);
 	\end{lstlisting}
 }
 
 \defverbatim[colored]\lstSounds{
 	\begin{lstlisting}[language=Java,basicstyle=\ttfamily,tabsize=4]
-	import processing.sound.*;
+	import ddf.minim.*;
 	
-	// Declaring the sound file
-	SoundFile sound;
-
+	Minim minim = new Minim(this);
+	
 	// Loading the sound file
-	sound = new SoundFile(this, "song.mp3");
+	AudioPlayer sound = minim.loadFile("song.mp3");
 
 	// Playing the sound
 	sound.play();
@@ -353,8 +352,6 @@ It supports the following formats: GIF, JPG, TGA, PNG.
 To use sounds, use the following code:\\
 
 \lstSounds
-
-It supports the following formats: WAV, AIF/AIFF, MP3.
 \end{frame}
 
 \section{Interaction Functions}
