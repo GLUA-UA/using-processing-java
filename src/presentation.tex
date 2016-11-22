@@ -148,6 +148,23 @@ public class Teste extends PApplet {
 	\end{lstlisting}
 }
 
+\defverbatim[colored]\lstText{
+	\begin{lstlisting}[language=Java,basicstyle=\ttfamily,tabsize=4]
+	PFont f;
+
+	// Font, Size, Anti-aliasing
+	f = createFont("Arial", 16, true);
+	textFont(f);
+
+	// Specifying the color
+	fill(gray);
+
+	// Writing the text
+	text("Hello world!", x, y);
+	text("Hello world!", x1, y1, x2, y2);
+	\end{lstlisting}
+}
+
 \begin{frame}
   \titlepage
 \end{frame}
@@ -334,6 +351,12 @@ the lower right corner, use the functions as defined below:\\
 \centerline{\includegraphics[scale=0.5]{ellipse_corners_mode.png}}
 \caption{Ellipse - CORNERS mode}
 \end{figure}
+\end{frame}
+
+\subsection{Text}
+
+\begin{frame}{Using text}
+\lstText
 \end{frame}
 
 \subsection{Images}
